@@ -28,9 +28,9 @@ public class TaskList : ExperimentTask
     public string[] skipConditions;
     public GameObject[] tasks; // no longer need to preset, shown for debugging and visualization - MJS
     public GameObject[] objectsList;
-    public int repeat = 1;
+    public int repeat = 0;
     public ObjectList overideRepeat;
-    public int repeatCount = 1;
+    public int repeatCount = 2;
     public bool hideTargetsDuringTask;
 
     [HideInInspector]
@@ -64,7 +64,7 @@ public class TaskList : ExperimentTask
 
     public override void TASK_START()
     {
-        repeatCount = 1;
+        repeatCount = 2;
 
         base.startTask();
 
@@ -226,7 +226,7 @@ public class TaskList : ExperimentTask
             // Clean up at the end in case this object is repeated in a nest
             currentTaskIndex = 0;
             startNewRepeat();
-            repeatCount = 1;
+            repeatCount = 2;
             catchFlag = false; // MJS - Added to prevent catch trials on first trial of next block
 
             // If targets were hidden, make them visible again
