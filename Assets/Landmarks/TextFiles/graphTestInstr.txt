@@ -1,0 +1,6 @@
+
+Exploration Phase
+
+You will have 10 minutes to freely explore the maze. 
+
+You will be tested by going from object to object using the paths of the maze. 
